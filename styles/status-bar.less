@@ -91,15 +91,19 @@ atom-panel-container.footer {
     bottom: 0;
     left: 0;
     width: 100%;
+  }
+}
 
-    &:hover {
-      transition: opacity 150ms ease-out 0ms;
-      opacity: 1;
-    }
+[theme-apex-adapt-dark-ui-auto-hide-status] atom-panel.footer {
+  transition: opacity 150ms ease-out;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+    transition: margin-bottom 150ms ease-out 0ms;
+  }
 
-    &:not(:hover) {
-      transition: opacity 150ms ease-out 1s;
-      opacity: 0;
-    }
+  &:not(:hover) {
+    transition: all 150ms ease-out 1s;
+    margin-bottom: -10px;
   }
 }
